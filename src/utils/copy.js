@@ -1,3 +1,8 @@
-const copy = {};
+const copy = [
+  {
+    title: '',
+    content: '',
+  },
+];
 
 export default copy;
