@@ -57,7 +57,7 @@ const theme = {
     sizes: {
       xs: '0.75rem',
       sm: '0.875rem',
-      base: '15px',
+      base: '12px',
       lg: '1.125rem',
       xl: '1.25rem',
       xl2: '1.5rem',
