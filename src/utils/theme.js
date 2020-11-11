@@ -16,6 +16,13 @@ const theme = {
       xl: '0.75rem',
       full: '9999px',
     },
+    width: {
+      b0: 0,
+      b1: '1px',
+      b2: '2px',
+      b4: '4px',
+      b8: '8px',
+    },
   },
   colors: {
     primary: {
@@ -30,6 +37,7 @@ const theme = {
       veryDarkGrayishBlue: 'hsl(237, 12%, 33%)',
       darkGrayishBlue: 'hsl(240, 6%, 50%)',
       lightGrayishBlue: 'hsl(240, 5%, 91%)',
+      white: '#fff',
     },
   },
   typography: {
