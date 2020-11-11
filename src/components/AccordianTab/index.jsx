@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import StyledAccordianTab from './styled';
 
 const AccordianTab = ({ title, content }) => (
@@ -9,3 +10,8 @@ const AccordianTab = ({ title, content }) => (
 );
 
 export default AccordianTab;
+
+AccordianTab.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+};

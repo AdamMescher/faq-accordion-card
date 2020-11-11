@@ -14,10 +14,6 @@ const AccordianTabList = ({ tabs }) => (
 
 export default AccordianTabList;
 
-AccordianTab.defaultProps = {
-  tabs: [{ title: 'title', content: 'content' }],
-};
-
 AccordianTabList.propTypes = {
   tabs: PropTypes.arrayOf(
     PropTypes.shape({
