@@ -88,6 +88,27 @@ const theme = {
     sp56: '14rem',
     sp64: '16rem',
   },
+  boxShadow: {
+    none: 'none',
+    tiny: '0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24)',
+    small: '0 3px 6px rgba(0,0,0,.15), 0 2px 4px rgba(0,0,0,.12)',
+    medium: '0 10px 20px rgba(0,0,0,0.15), 0 3px 6px rgba(0,0,0,0.10)',
+    large: '0 15px 25px rgba(0,0,0,0.15), 0 5px 10px rgba(0,0,0,0.05)',
+    huge: '0 20px 40px rgba(0,0,0,0.2)',
+  },
+  zIndex: {
+    1: 0,
+    100: 100,
+    200: 200,
+    300: 300,
+    400: 400,
+    500: 500,
+    600: 600,
+    700: 700,
+    800: 800,
+    900: 900,
+    1000: 1000,
+  },
 };
 
 export default theme;
