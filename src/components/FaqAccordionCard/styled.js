@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledFaqAccordianTab = styled.section`
+const StyledFaqAccordionTab = styled.section`
   height: 100vh;
   margin-top: 20vh;
   margin-bottom: 10vh;
@@ -16,4 +16,4 @@ const StyledFaqAccordianTab = styled.section`
   }
 `;
 
-export default StyledFaqAccordianTab;
+export default StyledFaqAccordionTab;
