@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
+import StyledAccordion from './styled';
 import AccordionContext from './context';
 import Collapse from './Collapse';
 import Toggle from './Toggle';
@@ -20,7 +21,9 @@ const Accordion = ({
   );
   return (
     <AccordionContext.Provider value={context}>
-      <Component {...otherProps}>{children}</Component>
+      <StyledAccordion>
+        <Component {...otherProps}>{children}</Component>
+      </StyledAccordion>
     </AccordionContext.Provider>
   );
 };

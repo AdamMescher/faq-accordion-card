@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import StyledCard from './styled';
 import CardHeader from './Header';
 import CardBody from './Body';
 
 const Card = ({ children, className }) => (
-  <div className={className}>{children}</div>
+  <StyledCard className={className}>{children}</StyledCard>
 );
 
 Card.Header = CardHeader;
