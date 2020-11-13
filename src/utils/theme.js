@@ -14,6 +14,8 @@ const theme = {
       md: '0.375em',
       lg: '0.5rem',
       xl: '0.75rem',
+      xl2: '1rem',
+      xl3: '1.5rem',
       full: '9999px',
     },
     width: {

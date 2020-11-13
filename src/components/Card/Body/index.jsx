@@ -1,21 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import StyledCardBody from './styled';
 
-const CardBody = ({ children, className, ...props }) => (
-  <StyledCardBody className={className} {...props}>
-    {children}
-  </StyledCardBody>
-);
+const CardBody = ({ children, ...props }) => <div {...props}>{children}</div>;
 
 CardBody.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  className: PropTypes.string,
-};
-
-CardBody.defaultProps = {
-  children: 'div',
-  className: '',
+  children: PropTypes.node.isRequired,
 };
 
 export default CardBody;
