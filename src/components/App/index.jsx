@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../GlobalStyle';
 import StyledApp from './styled';
@@ -9,12 +9,13 @@ import copy from '../../utils/copy';
 import Card from '../Card';
 
 function App() {
+  const [activeEventKey, setActiveEventKey] = useState(0);
   return (
     <ThemeProvider theme={theme}>
       <StyledApp>
         <Head />
         <GlobalStyle />
-        <Accordion>
+        <Accordion activeEventKey={activeEventKey} onToggle={setActiveEventKey}>
           {copy.map(({ title, content }, index) => (
             <Card key={index}>
               <Accordion.Toggle element={Card.Header} eventKey={index}>

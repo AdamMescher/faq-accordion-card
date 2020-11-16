@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import useAccordionContext from '../useAccordionContext';
 
 const Collapse = ({
   element: Component,
@@ -7,7 +8,10 @@ const Collapse = ({
   children,
   ...otherProps
 }) => {
-  return <Component {...otherProps}>{children}</Component>;
+  const { activeEventKey } = useAccordionContext();
+  return activeEventKey === eventKey ? (
+    <Component {...otherProps}>{children}</Component>
+  ) : null;
 };
 
 Collapse.propTypes = {
@@ -20,3 +24,5 @@ Collapse.defaultProps = {
   element: 'div',
   eventKey: '',
 };
+
+export default Collapse;

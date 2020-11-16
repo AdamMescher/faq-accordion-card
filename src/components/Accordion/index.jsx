@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
+import StyledAccordion from './styled';
 import Collapse from './Collapse';
 import Toggle from './Toggle';
+import AccordionContext from './AccordionContext';
 
 const Accordion = ({
   element: Component,
@@ -9,7 +11,21 @@ const Accordion = ({
   onToggle,
   children,
   ...otherProps
-}) => <Component {...otherProps}>{children}</Component>;
+}) => {
+  const context = useMemo(() => {
+    return {
+      activeEventKey,
+      onToggle,
+    };
+  }, [activeEventKey, onToggle]);
+  return (
+    <AccordionContext.Provider value={context}>
+      <StyledAccordion>
+        <Component {...otherProps}>{children}</Component>
+      </StyledAccordion>
+    </AccordionContext.Provider>
+  );
+};
 
 Accordion.Toggle = Toggle;
 Accordion.Collapse = Collapse;
