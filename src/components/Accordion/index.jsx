@@ -24,16 +24,13 @@ const Accordion = ({
 }) => {
   const [eventKey, setEventKey] = useEventKey(activeEventKey, onToggle);
 
-  const handleToggle = useCallback(
-    (eventKey) => {
-      if (activeEventKey !== undefined) {
-        onToggle(eventKey);
-        return;
-      }
-      setEventKey(eventKey);
-    },
-    [activeEventKey, onToggle, setEventKey]
-  );
+  const handleToggle = useCallback(() => {
+    if (activeEventKey !== undefined) {
+      onToggle(eventKey);
+      return;
+    }
+    setEventKey(eventKey);
+  }, [activeEventKey, onToggle, setEventKey]);
 
   const context = useMemo(() => {
     return {
