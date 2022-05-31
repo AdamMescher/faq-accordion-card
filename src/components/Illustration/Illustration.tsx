@@ -8,7 +8,7 @@ interface Props {
   assets: string;
 }
 
-const Wrapper = styled.div<{ assets: string }>`
+const Wrapper = styled.div`
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -47,7 +47,7 @@ const Wrapper = styled.div<{ assets: string }>`
   }
 `;
 
-const Illustration = ({ assets, ...args }: Props) => {
+const Illustration = ({ assets }: Props) => {
   let srcIllustration;
   let srcBackground;
   if (assets === "mobile") {
@@ -59,7 +59,7 @@ const Illustration = ({ assets, ...args }: Props) => {
     srcBackground = bgPatternDesktop;
   }
   return (
-    <Wrapper {...args}>
+    <Wrapper>
       <img className="illustration-woman" src={srcIllustration} alt={""} />
       <img className="background" src={srcBackground} alt={""} />
     </Wrapper>
