@@ -63,7 +63,7 @@ const ContentCopy = styled.p`
 `;
 
 const Attempt = ({ id, heading, content, expanded, setExpanded }: Props) => {
-  const handleClick = () => (expanded ? setExpanded(null) : setExpanded(id));
+  const handleClick = () => (expanded ? setExpanded(false) : setExpanded(id));
 
   return (
     <Wrapper>
