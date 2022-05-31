@@ -75,7 +75,9 @@ const AccordionList = styled.div`
 const FAQ = ({ size }: Props) => {
   const [expanded, setExpanded] = React.useState<string | null>(null);
   const assetsToDisplay = () =>
-    size && size?.width > 750 ? "desktop" : "mobile";
+    size && typeof size.width === "string" && size.width > 750
+      ? "desktop"
+      : "mobile";
   return (
     <Wrapper>
       <Illustration assets={assetsToDisplay()} />
