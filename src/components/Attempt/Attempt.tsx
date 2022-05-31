@@ -6,7 +6,7 @@ interface Props {
   id: string;
   heading: string;
   content: string;
-  expanded: boolean;
+  expanded: boolean | string;
   setExpanded: (string: boolean) => void;
 }
 
