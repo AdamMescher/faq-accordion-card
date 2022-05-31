@@ -13,6 +13,7 @@ const theme = {
       softBlue: "hsl(240, 73%, 65%)"
     },
     neutral: {
+      offWhite: "hsl(0deg 0% 96%)",
       veryDarkGrayishBlue: "hsl(237, 12%, 33%)",
       darkGrayishBlue: "hsl(240, 6%, 50%)",
       lightGrayishBlue: "hsl(240, 5%, 91%)"
