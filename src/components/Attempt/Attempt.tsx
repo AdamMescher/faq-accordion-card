@@ -6,7 +6,7 @@ interface Props {
   id: string;
   heading: string;
   content: string;
-  expanded: boolean | string;
+  expanded: any;
   setExpanded: (id: string | boolean) => void;
 }
 
@@ -25,7 +25,7 @@ const Heading = styled.h4`
   padding-bottom: 8px;
   width: 100%;
 `;
-const AccordionButton = styled.button<{ expanded: boolean }>`
+const AccordionButton = styled.button<{ expanded: boolean | string }>`
   font-size: 14px;
   color: var(--very-dark-desaturated-blue);
   border: none;
@@ -48,7 +48,7 @@ const AccordionButton = styled.button<{ expanded: boolean }>`
     color: var(--soft-red);
   }
 `;
-const Content = styled.div<{ expanded: boolean }>`
+const Content = styled.div<{ expanded: boolean | string }>`
   margin-top: ${({ expanded }) => (expanded ? "12px" : "0px")};
   max-height: ${({ expanded }) => (expanded ? "200px" : "0px")};
   transition: all 200ms ease-in-out;
