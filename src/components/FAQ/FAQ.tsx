@@ -73,7 +73,7 @@ const AccordionList = styled.div`
 `;
 
 const FAQ = ({ size }: Props) => {
-  const [expanded, setExpanded] = React.useState<string | null>(null);
+  const [expanded, setExpanded] = React.useState<any>(null);
   const assetsToDisplay = () =>
     size && typeof size.width === "string" && size.width > 750
       ? "desktop"
