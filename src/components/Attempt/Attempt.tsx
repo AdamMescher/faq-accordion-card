@@ -7,7 +7,7 @@ interface Props {
   heading: string;
   content: string;
   expanded: boolean | string;
-  setExpanded: (string: boolean) => void;
+  setExpanded: (id: string | boolean) => void;
 }
 
 const Wrapper = styled.div`
